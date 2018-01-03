@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Posts</title>
+        <style>
+
+    html body {
+        font-family: 'Helvetica', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: brown;
+        --border-width:  0 ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://example.com//css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica">
+
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.31.1" />
+        
+        <link href="http://example.com/post/index.xml" rel="alternate" type="application/rss+xml" title="Minimal" />
+        <link href="http://example.com/post/index.xml" rel="feed" type="application/rss+xml" title="Minimal" />
+        
+        
+        
+    </head>
+
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Posts</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/tags/">Tags</a></li>
+                            
+                                <li><a href="/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    <h2>Posts</h2>
+
+     <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/170420/1/">Fråga 1</a></h4>
+    <h5>April 20, 2017</h5>
+    <p>Given the following snippet of code, give a reason for having the using declaration on line
+4 instead of qualifying the call on line 5 (i.e. return <strong>std::begin(range)</strong>).</p>
+
+<pre><code>template &lt;typename Range &gt;
+auto iter( Range &amp;&amp; range )
+{
+    using std :: begin ;
+    return begin ( range ); // line 5
+}
+</code></pre>
+
+<p></p>
+    
+    
+    <a href="http://example.com/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/170420">
+        <kbd class="item-tag">170420</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/170420/2/">Fråga 2</a></h4>
+    <h5>April 20, 2017</h5>
+    <p>Given the following primary template declaration, give a declaration of a specialization of
+<strong>foo</strong> for type <strong>char</strong>.</p>
+
+<pre><code>template &lt;typename T&gt;
+struct foo;
+</code></pre>
+
+<p></p>
+    
+    
+    <a href="http://example.com/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/170420">
+        <kbd class="item-tag">170420</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/170420/3/">Fråga 3</a></h4>
+    <h5>April 20, 2017</h5>
+    <p>Assuming v is a <strong>std::vector&lt;int&gt;</strong>, why is the following code wrong?</p>
+
+<pre><code>static_assert (v.size () &gt; 0, &quot; vector is empty !&quot;);
+</code></pre>
+
+<p></p>
+    
+    
+    <a href="http://example.com/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/170420">
+        <kbd class="item-tag">170420</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/170420/4/">Fråga 4</a></h4>
+    <h5>April 20, 2017</h5>
+    Assume you have definitions for the following functions:
+void fun(int , short ); void fun(int , double );  The call fun(2,3) will give an ambiguous overload. Why?
+Answer: The problem is (of course) due to type conversions. An int can be implicitly converted to both double and short and both will give possible loss of precision.
+    
+    
+    <a href="http://example.com/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/170420">
+        <kbd class="item-tag">170420</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/170420/5/">Fråga 5</a></h4>
+    <h5>April 20, 2017</h5>
+    <p>Describe what length below does and give a valid example of a call to length.</p>
+
+<pre><code>template &lt;typename ... Args &gt;
+int length (Args &amp;&amp; ... args)
+{
+    return sizeof ...( args );
+}
+</code></pre>
+
+<p></p>
+    
+    
+    <a href="http://example.com/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/170420">
+        <kbd class="item-tag">170420</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/170112/1/">Fråga 1</a></h4>
+    <h5>January 12, 2017</h5>
+    <p>The standard library has a function <strong>std::addressof</strong> that is used in generic code to find
+the address of an object. Usually, the <strong>operator &amp;</strong> is used for finding addresses of objects,
+why do you think they added a function as well?
+</p>
+    
+    
+    <a href="http://example.com/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/170112">
+        <kbd class="item-tag">170112</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/170112/2/">Fråga 2</a></h4>
+    <h5>January 12, 2017</h5>
+    <p>A forwarding reference and an r-value reference are declared in the same way (<strong>Type &amp;&amp;</strong>),
+but are semantically very different. Why?
+</p>
+    
+    
+    <a href="http://example.com/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/170112">
+        <kbd class="item-tag">170112</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/170112/3/">Fråga 3</a></h4>
+    <h5>January 12, 2017</h5>
+    <p>C++14 added generic lambdas. Give an example of a generic lambda and give a definition
+of a function object class that is equivalent to the compiler-generated closure object created
+by your lambda.
+</p>
+    
+    
+    <a href="http://example.com/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/170112">
+        <kbd class="item-tag">170112</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/170112/4/">Fråga 4</a></h4>
+    <h5>January 12, 2017</h5>
+    <p>Why shouldn’t you use <strong>operator&lt;</strong> when comparing iterators in the code below (container
+is some sort of STL container):
+</p>
+    
+    
+    <a href="http://example.com/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="http://example.com/tags/170112">
+        <kbd class="item-tag">170112</kbd>
+    </a>
+    
+
+</div>
+ 
+
+</main>
+
+
+
+<div class="pages">
+
+    
+    <a class="icon pages-icon" href="/post/" rel="prev">
+        <i class="fa fa-arrow-left"></i>
+    </a>
+     
+
+</div>
+
+
+
+        <footer>
+
+            <p class="copyright text-muted"> :)</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

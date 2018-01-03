@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on Minimal</title>
+    <link>http://example.com/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on Minimal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fråga 1</title>
+      <link>http://example.com/post/170816/1/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170816/1/</guid>
+      <description>&lt;p&gt;Give a reason for why the language needs the virtual keyword from a viewpoint of the zero overhead principle?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 2</title>
+      <link>http://example.com/post/170816/2/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170816/2/</guid>
+      <description>&lt;p&gt;The &lt;strong&gt;&amp;lt;functional&amp;gt;&lt;/strong&gt; header has a lot of function objects that implement simple operations such as &lt;strong&gt;std::less&lt;/strong&gt; implementing &lt;strong&gt;operator&amp;lt;&lt;/strong&gt;. Why do we need these function objects?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 3</title>
+      <link>http://example.com/post/170816/3/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170816/3/</guid>
+      <description>&lt;p&gt;Exceptions should be caught by reference. Give two reasons why.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 4</title>
+      <link>http://example.com/post/170816/4/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170816/4/</guid>
+      <description>Question: Suppose that we have a class C with an int member i with a constructor that initializes i with an int value (see below). A problem with this implementation is that we are also able to call this constructor with values that are convertible to int. Give the declarations needed in the class to give compilation errors when the constructor is called with values of type that is convertible to int (i.</description>
+    </item>
+    
+    <item>
+      <title>Fråga 5</title>
+      <link>http://example.com/post/170816/5/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170816/5/</guid>
+      <description>&lt;p&gt;What is the difference between the noexcept operator and the noexcept specifier?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 1</title>
+      <link>http://example.com/post/170529/1/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170529/1/</guid>
+      <description>&lt;p&gt;What does it mean that a type is contextually convertible to bool?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 2</title>
+      <link>http://example.com/post/170529/2/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170529/2/</guid>
+      <description>&lt;p&gt;A function-try-block is sometimes good when defining constructors. Why are they especially
+good in that use-case?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 3</title>
+      <link>http://example.com/post/170529/3/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170529/3/</guid>
+      <description>&lt;p&gt;In a template parameter type declaration, you can use &lt;strong&gt;typename&lt;/strong&gt; or &lt;strong&gt;class&lt;/strong&gt;. Does it matter which one you use?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 4</title>
+      <link>http://example.com/post/170529/4/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170529/4/</guid>
+      <description>Why should one avoid to specialize a function template? What is the, often better, alter- native?
+Answer: Because of function call overload rules. A template function will never have its arguments converted by the compiler to match the call. A normal function overload is often better:
+// primary template template &amp;lt;typename T&amp;gt; void fun(T t) { ... } // specialization for int, will not be called with types // convertible to int such as short and long template&amp;lt;&amp;gt; void fun&amp;lt;int&amp;gt;(int t) { .</description>
+    </item>
+    
+    <item>
+      <title>Fråga 5</title>
+      <link>http://example.com/post/170529/5/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170529/5/</guid>
+      <description>&lt;p&gt;In which situation would one chose to declare a destructor pure virtual?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 1</title>
+      <link>http://example.com/post/170420/1/</link>
+      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170420/1/</guid>
+      <description>&lt;p&gt;Given the following snippet of code, give a reason for having the using declaration on line
+4 instead of qualifying the call on line 5 (i.e. return &lt;strong&gt;std::begin(range)&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;template &amp;lt;typename Range &amp;gt;
+auto iter( Range &amp;amp;&amp;amp; range )
+{
+    using std :: begin ;
+    return begin ( range ); // line 5
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 2</title>
+      <link>http://example.com/post/170420/2/</link>
+      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170420/2/</guid>
+      <description>&lt;p&gt;Given the following primary template declaration, give a declaration of a specialization of
+&lt;strong&gt;foo&lt;/strong&gt; for type &lt;strong&gt;char&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;template &amp;lt;typename T&amp;gt;
+struct foo;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 3</title>
+      <link>http://example.com/post/170420/3/</link>
+      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170420/3/</guid>
+      <description>&lt;p&gt;Assuming v is a &lt;strong&gt;std::vector&amp;lt;int&amp;gt;&lt;/strong&gt;, why is the following code wrong?&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;static_assert (v.size () &amp;gt; 0, &amp;quot; vector is empty !&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 4</title>
+      <link>http://example.com/post/170420/4/</link>
+      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170420/4/</guid>
+      <description>Assume you have definitions for the following functions:
+void fun(int , short ); void fun(int , double );  The call fun(2,3) will give an ambiguous overload. Why?
+Answer: The problem is (of course) due to type conversions. An int can be implicitly converted to both double and short and both will give possible loss of precision.</description>
+    </item>
+    
+    <item>
+      <title>Fråga 5</title>
+      <link>http://example.com/post/170420/5/</link>
+      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170420/5/</guid>
+      <description>&lt;p&gt;Describe what length below does and give a valid example of a call to length.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;template &amp;lt;typename ... Args &amp;gt;
+int length (Args &amp;amp;&amp;amp; ... args)
+{
+    return sizeof ...( args );
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 1</title>
+      <link>http://example.com/post/170112/1/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170112/1/</guid>
+      <description>&lt;p&gt;The standard library has a function &lt;strong&gt;std::addressof&lt;/strong&gt; that is used in generic code to find
+the address of an object. Usually, the &lt;strong&gt;operator &amp;amp;&lt;/strong&gt; is used for finding addresses of objects,
+why do you think they added a function as well?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 2</title>
+      <link>http://example.com/post/170112/2/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170112/2/</guid>
+      <description>&lt;p&gt;A forwarding reference and an r-value reference are declared in the same way (&lt;strong&gt;Type &amp;amp;&amp;amp;&lt;/strong&gt;),
+but are semantically very different. Why?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 3</title>
+      <link>http://example.com/post/170112/3/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170112/3/</guid>
+      <description>&lt;p&gt;C++14 added generic lambdas. Give an example of a generic lambda and give a definition
+of a function object class that is equivalent to the compiler-generated closure object created
+by your lambda.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 4</title>
+      <link>http://example.com/post/170112/4/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/170112/4/</guid>
+      <description>&lt;p&gt;Why shouldn’t you use &lt;strong&gt;operator&amp;lt;&lt;/strong&gt; when comparing iterators in the code below (container
+is some sort of STL container):
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

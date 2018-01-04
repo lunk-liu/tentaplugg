@@ -1,4 +1,4 @@
-baseURL = "http://example.com/"
+baseURL = "https://lunk-liu.github.io/tentaplugg/"
 languageCode = "en-us"
 title = "Minimal"
 theme = "minimal"
@@ -16,7 +16,7 @@ theme = "minimal"
     highlight = true
     # highlightStyle = "solarized-dark"
     highlightStyle = "monokai"
-    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift", "cpp"]
+    highlightLanguages = ["bash", "cpp"]
 
 [[menu.main]]
     url = "/"

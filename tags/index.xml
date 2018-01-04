@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Minimal</title>
+    <link>https://lunk-liu.github.io/tentaplugg/tags/</link>
+    <description>Recent content in Tags on Minimal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://lunk-liu.github.io/tentaplugg/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>170112</title>
+      <link>https://lunk-liu.github.io/tentaplugg/tags/170112/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/tags/170112/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>170420</title>
+      <link>https://lunk-liu.github.io/tentaplugg/tags/170420/</link>
+      <pubDate>Thu, 20 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/tags/170420/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>170529</title>
+      <link>https://lunk-liu.github.io/tentaplugg/tags/170529/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/tags/170529/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>170816</title>
+      <link>https://lunk-liu.github.io/tentaplugg/tags/170816/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/tags/170816/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inget</title>
+      <link>https://lunk-liu.github.io/tentaplugg/tags/inget/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/tags/inget/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teorifrågor</title>
+      <link>https://lunk-liu.github.io/tentaplugg/tags/teorifr%C3%A5gor/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/tags/teorifr%C3%A5gor/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

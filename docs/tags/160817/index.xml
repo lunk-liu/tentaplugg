@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>160817 on TDDD38 tentaplugg #5</title>
+    <link>https://lunk-liu.github.io/tentaplugg/tags/160817/</link>
+    <description>Recent content in 160817 on TDDD38 tentaplugg #5</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Aug 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://lunk-liu.github.io/tentaplugg/tags/160817/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fråga 1</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160817/1/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160817/1/</guid>
+      <description>&lt;p&gt;Consider the following function. Why is this interface a bad design? (hint, think about ownership&amp;hellip;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;X* compute( /*some args*/ ) {
+    X* res = new X{};
+    // do something with res 
+    return res;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 2</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160817/2/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160817/2/</guid>
+      <description>&lt;p&gt;What is meant by the keyword constexpr and why is it sometimes needed?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 3</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160817/3/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160817/3/</guid>
+      <description>&lt;p&gt;Give some short code example showing why it is important to always do member initialization in declaration order in a member initializer list.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 4</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160817/4/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160817/4/</guid>
+      <description>&lt;p&gt;Consider the following class:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class X {
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Declare a user-defined conversion function to convert &lt;strong&gt;X&lt;/strong&gt; into &lt;strong&gt;int&lt;/strong&gt; as a member function.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 5</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160817/5/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160817/5/</guid>
+      <description>&lt;p&gt;Give an example of a class that can be passed to the function foo below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;template&amp;lt;typename T, typename U, template&amp;lt;typename, typename&amp;gt; class Container&amp;gt;
+void foo(Container&amp;lt;T,U&amp;gt; const &amp;amp;) {
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

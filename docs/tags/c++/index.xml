@@ -238,5 +238,193 @@ is some sort of STL container):
 &lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Fråga 1</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160817/1/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160817/1/</guid>
+      <description>&lt;p&gt;Consider the following function. Why is this interface a bad design? (hint, think about ownership&amp;hellip;)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;X* compute( /*some args*/ ) {
+    X* res = new X{};
+    // do something with res 
+    return res;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 2</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160817/2/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160817/2/</guid>
+      <description>&lt;p&gt;What is meant by the keyword constexpr and why is it sometimes needed?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 3</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160817/3/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160817/3/</guid>
+      <description>&lt;p&gt;Give some short code example showing why it is important to always do member initialization in declaration order in a member initializer list.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 4</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160817/4/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160817/4/</guid>
+      <description>&lt;p&gt;Consider the following class:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class X {
+};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Declare a user-defined conversion function to convert &lt;strong&gt;X&lt;/strong&gt; into &lt;strong&gt;int&lt;/strong&gt; as a member function.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 5</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160817/5/</link>
+      <pubDate>Wed, 17 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160817/5/</guid>
+      <description>&lt;p&gt;Give an example of a class that can be passed to the function foo below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;template&amp;lt;typename T, typename U, template&amp;lt;typename, typename&amp;gt; class Container&amp;gt;
+void foo(Container&amp;lt;T,U&amp;gt; const &amp;amp;) {
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 1</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160602/1/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160602/1/</guid>
+      <description>&lt;p&gt;Give one code example of where the compiler uses ADL for name lookup.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 2</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160602/2/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160602/2/</guid>
+      <description>&lt;p&gt;Give, with either text or a short (1-5 simple statements each) code example, two examples of undefined behavior.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 3</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160602/3/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160602/3/</guid>
+      <description>&lt;p&gt;Why should you prefer usage of the free function &lt;code&gt;std::begin&lt;/code&gt; instead of using the member function?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 4</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160602/4/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160602/4/</guid>
+      <description>&lt;p&gt;What is the difference between implementation defined behavior and undefined behavior?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 5</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160602/5/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160602/5/</guid>
+      <description>&lt;p&gt;What is meant by the zero-overhead rule?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 1</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160331/1/</link>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160331/1/</guid>
+      <description>&lt;p&gt;Given the following declarations, explain why the call &lt;code&gt;max(i,d)&lt;/code&gt; will give an error. Make a possible fix in the call to make it compile.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;template &amp;lt;typename T&amp;gt; 
+T max(T, T);
+
+int i; 
+double d ;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 2</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160331/2/</link>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160331/2/</guid>
+      <description>&lt;p&gt;In C++, it is possible to create an unnamed namespace. What is an unnamed namespace and what is it used for?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 3</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160331/3/</link>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160331/3/</guid>
+      <description>&lt;p&gt;Give two different uses of the keyword &lt;code&gt;mutable&lt;/code&gt; and describe the effect of &lt;code&gt;mutable&lt;/code&gt; in each case.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 4</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160331/4/</link>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160331/4/</guid>
+      <description>&lt;p&gt;Give two ways of supplying the compiler with implicit type conversion to or from a user-defined type.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 5</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160331/5/</link>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160331/5/</guid>
+      <description>&lt;p&gt;Give an example of a delegating constructor.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Programmeringsuppgift 6</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160331/assignment6/</link>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160331/assignment6/</guid>
+      <description>Submit your solution as Assignment #6 The game Yahtzee is based on throwing five dice and trying to get specific combinations of these dice. In this assignment, you are going to implement a part of the scoring mechanism.
+There are a lot of possible combinations that gives points in Yahtzee, but in this exercise we are going to support checking for a number of ones, number of twos and one pair (two dice with the same result) in a given set of dice.</description>
+    </item>
+    
   </channel>
 </rss>

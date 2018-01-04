@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programmeringsuppgifter on TDDD38 tentaplugg #5</title>
+    <link>https://lunk-liu.github.io/tentaplugg/tags/programmeringsuppgifter/</link>
+    <description>Recent content in Programmeringsuppgifter on TDDD38 tentaplugg #5</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Mar 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://lunk-liu.github.io/tentaplugg/tags/programmeringsuppgifter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Programmeringsuppgift 6</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160331/assignment6/</link>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160331/assignment6/</guid>
+      <description>Submit your solution as Assignment #6 The game Yahtzee is based on throwing five dice and trying to get specific combinations of these dice. In this assignment, you are going to implement a part of the scoring mechanism.
+There are a lot of possible combinations that gives points in Yahtzee, but in this exercise we are going to support checking for a number of ones, number of twos and one pair (two dice with the same result) in a given set of dice.</description>
+    </item>
+    
+  </channel>
+</rss>

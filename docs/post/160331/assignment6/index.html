@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Programmeringsuppgift 6</title>
+        <style>
+
+    html body {
+        font-family: 'Helvetica', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: brown;
+        --border-width:  0 ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://lunk-liu.github.io/tentaplugg//css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica">
+
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.31.1" />
+        
+        
+        
+    </head>
+
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Programmeringsuppgift 6</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/tentaplugg/">Home</a></li>
+                            
+                                <li><a href="/tentaplugg/post/">Posts</a></li>
+                            
+                                <li><a href="/tentaplugg/tags/">Tags</a></li>
+                            
+                                <li><a href="/tentaplugg/project/">Projects</a></li>
+                            
+                        </ul>
+                    
+
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    
+
+
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/160331/assignment6/">Programmeringsuppgift 6</a></h4>
+    <h5>March 31, 2016</h5>
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/programmeringsuppgifter">
+        <kbd class="item-tag">programmeringsuppgifter</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/160331">
+        <kbd class="item-tag">160331</kbd>
+    </a>
+    
+
+</div>
+
+
+
+    <br> <div class="text-justify">
+
+<p>Submit your solution as Assignment #6
+The game Yahtzee is based on throwing five dice and trying to get specific combinations of these dice. In this assignment, you are going to implement a part of the scoring mechanism.</p>
+
+<p>There are a lot of possible combinations that gives points in Yahtzee, but in this exercise we are going to support checking for a number of ones, number of twos and one pair (two dice with the same result) in a given set of dice.</p>
+
+<p>Create an abstract base class <code>Score_Variant</code> having two direct subclasses <code>Counted_Dice</code> and <code>Pair</code>. Also create two subclasses to <code>Counted_Dice</code> called <code>Ones</code> and <code>Twos</code>.</p>
+
+<p>All classes must have these two member functions:</p>
+
+<ul>
+<li>string name() - Gives the string ”Ones”, ”Twos” and ”Pair” for the classes Ones, Twos and Pair respectively.</li>
+<li>int score() - Takes a <code>vector&lt;int&gt;</code> and returns the highest possible score for this scoring variant. For Ones and Twos, this is the sum of all ones and twos, for Pair the result is the sum of the highest possible pair in the vector. See table 1 for examples.</li>
+</ul>
+
+<p>Since the calculation in <code>score</code> for Ones and Twos will be very similar, this calculation should be done by <code>Counted_Dice</code> by adding a constructor taking an int (the die searched for) and storing this as a member. <code>Counted_Dice</code> will also have a member function <code>get_number</code> to get the value of this number (this may be useful in the final printout step).</p>
+
+<p>No other member functions than those listed are allowed.</p>
+
+<p>It must not be possible to copy or move any objects of the above class types.</p>
+
+<p>Dice&hellip;&hellip;..Ones&hellip;.Twos&hellip;.Pair</p>
+
+<p>1,2,3,2,1&hellip;2&hellip;&hellip;&hellip;4&hellip;&hellip;&hellip;4</p>
+
+<p>3,3,5,5,5&hellip;0&hellip;&hellip;&hellip;0&hellip;&hellip;.10</p>
+
+<p><em>Table 1: Expected scores from the three variants for some given sets of dice.</em></p>
+
+<p>Also create a main function that test your implementation by creating a vector containing one of each of the concrete classes (Ones, Twos and Pair). Also create one vector of ints representing your dice. For each of the score variants, check if the dice gives any points and if so, print first the name of the score variant, then the score according to that variant and, if it is Ones or Twos, print the number of ones or twos found. An example is given in listing 1.</p>
+
+<pre><code>Listing 1: Exmple output for the dice 3, 2, 2, 3, 5
+Twos: 4 (2) 
+Pair: 6
+</code></pre>
+
+<p>Note: Even if this assignment only require three concrete score variants to be implemented, your code must show some general solutions so that it can be easily expanded with more score variants. Note that all possible Conted_Dice should print the number of scoring dice in the set (not specific to Ones and Twos).</p>
+
+<h2 id="facit">Facit:</h2>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;functional&gt;
+#include &lt;memory&gt;
+using namespace std;
+class Score_Variant
+{
+public:
+    virtual int score(vector&lt;int&gt; const &amp;) const = 0;
+    virtual string name() const = 0;
+    virtual ~Score_Variant() = default;
+protected:
+    Score_Variant() = default;
+private:
+    Score_Variant(Score_Variant const &amp;) = delete;
+    Score_Variant &amp; operator=(Score_Variant const &amp;) = delete;
+};
+class Counted_Dice: public Score_Variant
+{
+public:
+    int score(vector&lt;int&gt; const &amp; dice) const override
+    {
+        int found {};
+        for ( auto die : dice )
+        {
+            if ( die == value )
+                ++found;
+        }
+        return value*found;
+        // or value * count(begin(dice), end(dice), value);
+    }
+    int get_number() const { return value; }
+protected:
+    Counted_Dice(int lookfor): value{lookfor}
+    {}
+private:
+    int value;
+};
+
+class Ones : public Counted_Dice
+{
+public:
+    Ones(): Counted_Dice{1} {}
+    string name() const override { return &quot;Ones&quot;; }
+};
+
+class Twos : public Counted_Dice
+{
+public:
+    Twos(): Counted_Dice{2} {}
+    string name() const override { return &quot;Twos&quot;; }
+};
+
+class Pair : public Score_Variant
+{
+public:
+    int score(vector&lt;int&gt; const &amp; dice) const override
+    {
+        auto d = dice;
+        sort(begin(d), end(d), greater&lt;int&gt;{});
+        auto it = adjacent_find(begin(d), end(d));
+        if ( it != end(d) )
+        {
+            return (*it)*2;
+        }
+        return 0;
+    }
+    string name() const override
+    {
+        return &quot;Pair&quot;;
+    }
+};
+
+int main()
+{
+    // should really use some smart pointer, but fine without...
+    const vector&lt;Score_Variant*&gt; score_variants {new Ones, new Twos, new Pair};
+    vector&lt;int&gt; dice {1,4,1,5,4};
+    for ( auto &amp;&amp; variant : score_variants )
+    {
+        auto points = variant-&gt;score(dice);
+        if ( points != 0 )
+        {
+            cout &lt;&lt; variant-&gt;name() &lt;&lt; &quot;: &quot; &lt;&lt; points;
+            if ( auto ptr = dynamic_cast&lt;Counted_Dice*&gt;(variant) )
+            {
+                cout &lt;&lt; &quot; (&quot; &lt;&lt; points / ptr-&gt;get_number() &lt;&lt; &quot;)&quot;;
+            }
+            cout &lt;&lt; endl;
+        }
+    }
+    // deallocate pointers
+    for ( auto &amp; variant : score_variants )
+    {
+        delete variant;
+    }
+}
+
+</code></pre>
+</div>
+
+    
+    
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted"> :)</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

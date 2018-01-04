@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>170529 on TDDD38 tentaplugg #5</title>
+    <link>https://lunk-liu.github.io/tentaplugg/tags/170529/</link>
+    <description>Recent content in 170529 on TDDD38 tentaplugg #5</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://lunk-liu.github.io/tentaplugg/tags/170529/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fråga 1</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170529/1/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170529/1/</guid>
+      <description>&lt;p&gt;What does it mean that a type is contextually convertible to bool?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 2</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170529/2/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170529/2/</guid>
+      <description>&lt;p&gt;A function-try-block is sometimes good when defining constructors. Why are they especially
+good in that use-case?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 3</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170529/3/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170529/3/</guid>
+      <description>&lt;p&gt;In a template parameter type declaration, you can use &lt;strong&gt;typename&lt;/strong&gt; or &lt;strong&gt;class&lt;/strong&gt;. Does it matter which one you use?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 4</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170529/4/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170529/4/</guid>
+      <description>Why should one avoid to specialize a function template? What is the, often better, alter- native?
+Answer: Because of function call overload rules. A template function will never have its arguments converted by the compiler to match the call. A normal function overload is often better:
+// primary template template &amp;lt;typename T&amp;gt; void fun(T t) { ... } // specialization for int, will not be called with types // convertible to int such as short and long template&amp;lt;&amp;gt; void fun&amp;lt;int&amp;gt;(int t) { .</description>
+    </item>
+    
+    <item>
+      <title>Fråga 5</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170529/5/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170529/5/</guid>
+      <description>&lt;p&gt;In which situation would one chose to declare a destructor pure virtual?
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

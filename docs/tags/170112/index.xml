@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>170112 on TDDD38 tentaplugg #5</title>
+    <link>https://lunk-liu.github.io/tentaplugg/tags/170112/</link>
+    <description>Recent content in 170112 on TDDD38 tentaplugg #5</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://lunk-liu.github.io/tentaplugg/tags/170112/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fråga 1</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170112/1/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170112/1/</guid>
+      <description>&lt;p&gt;The standard library has a function &lt;strong&gt;std::addressof&lt;/strong&gt; that is used in generic code to find
+the address of an object. Usually, the &lt;strong&gt;operator &amp;amp;&lt;/strong&gt; is used for finding addresses of objects,
+why do you think they added a function as well?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 2</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170112/2/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170112/2/</guid>
+      <description>&lt;p&gt;A forwarding reference and an r-value reference are declared in the same way (&lt;strong&gt;Type &amp;amp;&amp;amp;&lt;/strong&gt;),
+but are semantically very different. Why?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 3</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170112/3/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170112/3/</guid>
+      <description>&lt;p&gt;C++14 added generic lambdas. Give an example of a generic lambda and give a definition
+of a function object class that is equivalent to the compiler-generated closure object created
+by your lambda.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 4</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170112/4/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170112/4/</guid>
+      <description>&lt;p&gt;Why shouldn’t you use &lt;strong&gt;operator&amp;lt;&lt;/strong&gt; when comparing iterators in the code below (container
+is some sort of STL container):
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

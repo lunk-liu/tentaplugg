@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>170816 on TDDD38 tentaplugg #5</title>
+    <link>https://lunk-liu.github.io/tentaplugg/tags/170816/</link>
+    <description>Recent content in 170816 on TDDD38 tentaplugg #5</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://lunk-liu.github.io/tentaplugg/tags/170816/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fråga 1</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170816/1/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170816/1/</guid>
+      <description>&lt;p&gt;Give a reason for why the language needs the virtual keyword from a viewpoint of the zero overhead principle?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 2</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170816/2/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170816/2/</guid>
+      <description>&lt;p&gt;The &lt;strong&gt;&amp;lt;functional&amp;gt;&lt;/strong&gt; header has a lot of function objects that implement simple operations such as &lt;strong&gt;std::less&lt;/strong&gt; implementing &lt;strong&gt;operator&amp;lt;&lt;/strong&gt;. Why do we need these function objects?
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 3</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170816/3/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170816/3/</guid>
+      <description>&lt;p&gt;Exceptions should be caught by reference. Give two reasons why.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fråga 4</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170816/4/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170816/4/</guid>
+      <description>Question: Suppose that we have a class C with an int member i with a constructor that initializes i with an int value (see below). A problem with this implementation is that we are also able to call this constructor with values that are convertible to int. Give the declarations needed in the class to give compilation errors when the constructor is called with values of type that is convertible to int (i.</description>
+    </item>
+    
+    <item>
+      <title>Fråga 5</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/170816/5/</link>
+      <pubDate>Wed, 16 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/170816/5/</guid>
+      <description>&lt;p&gt;What is the difference between the noexcept operator and the noexcept specifier?
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

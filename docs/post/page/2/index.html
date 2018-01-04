@@ -126,6 +126,94 @@
     
     
 
+    <h4><a href="/tentaplugg/post/170529/3/">Fråga 3</a></h4>
+    <h5>May 29, 2017</h5>
+    <p>In a template parameter type declaration, you can use <strong>typename</strong> or <strong>class</strong>. Does it matter which one you use?
+</p>
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/170529">
+        <kbd class="item-tag">170529</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/170529/4/">Fråga 4</a></h4>
+    <h5>May 29, 2017</h5>
+    Why should one avoid to specialize a function template? What is the, often better, alter- native?
+Answer: Because of function call overload rules. A template function will never have its arguments converted by the compiler to match the call. A normal function overload is often better:
+// primary template template &lt;typename T&gt; void fun(T t) { ... } // specialization for int, will not be called with types // convertible to int such as short and long template&lt;&gt; void fun&lt;int&gt;(int t) { .
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/170529">
+        <kbd class="item-tag">170529</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/170529/5/">Fråga 5</a></h4>
+    <h5>May 29, 2017</h5>
+    <p>In which situation would one chose to declare a destructor pure virtual?
+</p>
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/170529">
+        <kbd class="item-tag">170529</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
     <h4><a href="/tentaplugg/post/170420/1/">Fråga 1</a></h4>
     <h5>April 20, 2017</h5>
     <p>Given the following snippet of code, give a reason for having the using declaration on line
@@ -348,104 +436,6 @@ but are semantically very different. Why?
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/170112">
         <kbd class="item-tag">170112</kbd>
-    </a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/post/170112/3/">Fråga 3</a></h4>
-    <h5>January 12, 2017</h5>
-    <p>C++14 added generic lambdas. Give an example of a generic lambda and give a definition
-of a function object class that is equivalent to the compiler-generated closure object created
-by your lambda.
-</p>
-    
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
-        <kbd class="item-tag">c&#43;&#43;</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
-        <kbd class="item-tag">teorifrågor</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/170112">
-        <kbd class="item-tag">170112</kbd>
-    </a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/post/170112/4/">Fråga 4</a></h4>
-    <h5>January 12, 2017</h5>
-    <p>Why shouldn’t you use <strong>operator&lt;</strong> when comparing iterators in the code below (container
-is some sort of STL container):
-</p>
-    
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
-        <kbd class="item-tag">c&#43;&#43;</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
-        <kbd class="item-tag">teorifrågor</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/170112">
-        <kbd class="item-tag">170112</kbd>
-    </a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/post/160817/1/">Fråga 1</a></h4>
-    <h5>August 17, 2016</h5>
-    <p>Consider the following function. Why is this interface a bad design? (hint, think about ownership&hellip;)</p>
-
-<pre><code>X* compute( /*some args*/ ) {
-    X* res = new X{};
-    // do something with res 
-    return res;
-}
-</code></pre>
-
-<p></p>
-    
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
-        <kbd class="item-tag">c&#43;&#43;</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
-        <kbd class="item-tag">teorifrågor</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/160817">
-        <kbd class="item-tag">160817</kbd>
     </a>
     
 

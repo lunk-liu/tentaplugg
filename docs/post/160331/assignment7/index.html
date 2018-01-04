@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Programmeringsuppgift 7</title>
+        <style>
+
+    html body {
+        font-family: 'Helvetica', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: brown;
+        --border-width:  0 ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://lunk-liu.github.io/tentaplugg//css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica">
+
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.31.1" />
+        
+        
+        
+    </head>
+
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Programmeringsuppgift 7</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/tentaplugg/">Home</a></li>
+                            
+                                <li><a href="/tentaplugg/post/">Posts</a></li>
+                            
+                                <li><a href="/tentaplugg/tags/">Tags</a></li>
+                            
+                        </ul>
+                    
+
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    
+
+
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/160331/assignment7/">Programmeringsuppgift 7</a></h4>
+    <h5>March 31, 2016</h5>
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/programmeringsuppgifter">
+        <kbd class="item-tag">programmeringsuppgifter</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/160331">
+        <kbd class="item-tag">160331</kbd>
+    </a>
+    
+
+</div>
+
+
+
+    <br> <div class="text-justify">
+
+<p>Copy the file given_files/assignment7.cc to your working directory and make changes to your copy. Submit your answer as Assignment #7.</p>
+
+<p>There is a function that works a bit like the standard algorithm <code>std::find</code> (but much simpler).</p>
+
+<pre><code>int * Find(int * start, int * end, int val) {
+    for ( auto it = start; it != end; ++it ) {
+        if ( *it == val ) {
+            return it; }
+        }
+    }
+    return end; // wasn't found
+</code></pre>
+
+<p>Your task is to do the following modifications to the given function so that the commented lines in the given code compile and give output according to the comments.</p>
+
+<ul>
+<li><p>Create a namespace called <code>assignment</code> and rename the given function to <code>find</code> and add it to that namespace to get rid of possible name clashes with <code>std::find</code>.</p></li>
+
+<li><p>Make <code>assignment::find</code> into a template that works with real iterators instead of just pointer to int.</p></li>
+
+<li><p>Change the third argument of <code>assignment::find</code> to a unary predicate function (a function taking one argument and returning bool). <code>find</code> shall return the first element for which the predicate returns true (or the second argument if none is found).</p></li>
+</ul>
+
+<p>With these alterations, we have gone from a very basic linear find that searches for a specific value of type int to a version of <code>std::find_if</code>.</p>
+
+<h2 id="given-files">Given files</h2>
+
+<pre><code>int * Find(int * start, int * end, int val)
+{
+    for ( auto it = start; it != end; ++it )
+    {
+        if ( *it == val )
+            return it;
+    }
+    return end; // wasn't found
+}
+
+int main()
+{
+    int arr [] = {1, 2, 5, 2, 7 ,8};
+    auto pos = Find(begin(arr), end(arr), 2);
+    if ( pos != end(arr) )
+        cout &lt;&lt; *pos &lt;&lt; &quot; found&quot;;
+    else
+        cout &lt;&lt; &quot;not found&quot;;
+    
+    // After modifications:
+    /*
+    std::list&lt;int&gt; l{1,6,2,7,0,9};
+    auto val = assignment::find(begin(l), end(l),
+                                [](int i) { return i % 2 == 0; });
+    if ( val != end(l) )
+        cout &lt;&lt; &quot;First even number: &quot; &lt;&lt; *val &lt;&lt; endl;
+    */
+}
+</code></pre>
+
+<h2 id="facit">Facit:</h2>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;list&gt;
+using namespace std;
+
+namespace assignment
+{
+    template &lt;typename Iter, typename Func&gt;
+    Iter find(Iter start, Iter end, Func fun)
+    {
+        for ( auto it = start; it != end; ++it )
+        {
+            if ( fun(*it) )
+                return it;
+        }
+        return end; // wasn't found
+    }
+}
+
+int main()
+{
+/*    int arr [] = {1, 2, 5, 2, 7 ,8};
+    auto pos = Find(begin(arr), end(arr), 2);
+    if ( pos != end(arr) )
+        cout &lt;&lt; *pos &lt;&lt; &quot; found&quot;;
+    else
+        cout &lt;&lt; &quot;not found&quot;;
+*/
+    // After modifications:
+
+    std::list&lt;int&gt; l{1,6,2,7,0,9};
+    auto val = assignment::find(begin(l), end(l),
+                                [](int i) { return i % 2 == 0; });
+    if ( val != end(l) )
+        cout &lt;&lt; &quot;First even number: &quot; &lt;&lt; *val &lt;&lt; endl;
+
+}
+
+</code></pre>
+</div>
+
+    
+    
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted"> :)</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

@@ -126,6 +126,83 @@
     
     
 
+    <h4><a href="/tentaplugg/post/plugga/klasser/">Konstruktorer osv</a></h4>
+    <h5>January 4, 2018</h5>
+    class String { public: using size_type = std::size_t; // nested type (alias declaration) String() = default; // default constructor, compiler generated String(const String&amp;); // copy constructor String(String&amp;&amp;) noexcept ; // move constructor String(const char*); // type converting constructor, from C string ~String(); // destructor String&amp; operator=(const String&amp;) &amp;; // copy assignment operator, ref-qualifier (lvalues only) String&amp; operator=(String&amp;&amp;) &amp; noexcept; // move assignment operator String&amp; operator=(const char*) &amp;; // type converting assignment operator size_type length() const; // const member function – accessor function // .
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/plugg">
+        <kbd class="item-tag">plugg</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/plugga/kort_och_gott/">Kort och gott</a></h4>
+    <h5>January 4, 2018</h5>
+    rvalue The name rule: If it has a name it’s an lvalue, otherwise it&rsquo;s a rvalue.
+Constructor delegation Att en konstruktor utnytjar en annan konstruktor för att utföra sitt jobb. Tex Child(int x) : Parent{x} {};, eller String() : String{ &quot;&quot; } {};
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/plugg">
+        <kbd class="item-tag">plugg</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/plugga/todo/">Todo</a></h4>
+    <h5>January 4, 2018</h5>
+     Allt det här med konstruktorer i polymorfa klasshierkier template templates nöta in dynamic_cast och typeid, templateclass Policy&gt;, nth_element, vad fan är r-value, l-value, r-value reference?  
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/todo">
+        <kbd class="item-tag">todo</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/plugg">
+        <kbd class="item-tag">plugg</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
     <h4><a href="/tentaplugg/post/170816/1/">Fråga 1</a></h4>
     <h5>August 16, 2017</h5>
     <p>Give a reason for why the language needs the virtual keyword from a viewpoint of the zero overhead principle?</p>
@@ -304,94 +381,6 @@
     <h5>May 29, 2017</h5>
     <p>A function-try-block is sometimes good when defining constructors. Why are they especially
 good in that use-case?
-</p>
-    
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
-        <kbd class="item-tag">c&#43;&#43;</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
-        <kbd class="item-tag">teorifrågor</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/170529">
-        <kbd class="item-tag">170529</kbd>
-    </a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/post/170529/3/">Fråga 3</a></h4>
-    <h5>May 29, 2017</h5>
-    <p>In a template parameter type declaration, you can use <strong>typename</strong> or <strong>class</strong>. Does it matter which one you use?
-</p>
-    
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
-        <kbd class="item-tag">c&#43;&#43;</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
-        <kbd class="item-tag">teorifrågor</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/170529">
-        <kbd class="item-tag">170529</kbd>
-    </a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/post/170529/4/">Fråga 4</a></h4>
-    <h5>May 29, 2017</h5>
-    Why should one avoid to specialize a function template? What is the, often better, alter- native?
-Answer: Because of function call overload rules. A template function will never have its arguments converted by the compiler to match the call. A normal function overload is often better:
-// primary template template &lt;typename T&gt; void fun(T t) { ... } // specialization for int, will not be called with types // convertible to int such as short and long template&lt;&gt; void fun&lt;int&gt;(int t) { .
-    
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
-        <kbd class="item-tag">c&#43;&#43;</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
-        <kbd class="item-tag">teorifrågor</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/170529">
-        <kbd class="item-tag">170529</kbd>
-    </a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/post/170529/5/">Fråga 5</a></h4>
-    <h5>May 29, 2017</h5>
-    <p>In which situation would one chose to declare a destructor pure virtual?
 </p>
     
     

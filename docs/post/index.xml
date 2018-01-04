@@ -6,10 +6,38 @@
     <description>Recent content in Posts on TDDD38 tentaplugg #5</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lunk-liu.github.io/tentaplugg/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Konstruktorer osv</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/plugga/klasser/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/plugga/klasser/</guid>
+      <description>class String { public: using size_type = std::size_t; // nested type (alias declaration) String() = default; // default constructor, compiler generated String(const String&amp;amp;); // copy constructor String(String&amp;amp;&amp;amp;) noexcept ; // move constructor String(const char*); // type converting constructor, from C string ~String(); // destructor String&amp;amp; operator=(const String&amp;amp;) &amp;amp;; // copy assignment operator, ref-qualifier (lvalues only) String&amp;amp; operator=(String&amp;amp;&amp;amp;) &amp;amp; noexcept; // move assignment operator String&amp;amp; operator=(const char*) &amp;amp;; // type converting assignment operator size_type length() const; // const member function – accessor function // .</description>
+    </item>
+    
+    <item>
+      <title>Kort och gott</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/plugga/kort_och_gott/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/plugga/kort_och_gott/</guid>
+      <description>rvalue The name rule: If it has a name it’s an lvalue, otherwise it&amp;rsquo;s a rvalue.
+Constructor delegation Att en konstruktor utnytjar en annan konstruktor för att utföra sitt jobb. Tex Child(int x) : Parent{x} {};, eller String() : String{ &amp;quot;&amp;quot; } {};</description>
+    </item>
+    
+    <item>
+      <title>Todo</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/plugga/todo/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/plugga/todo/</guid>
+      <description> Allt det här med konstruktorer i polymorfa klasshierkier template templates nöta in dynamic_cast och typeid, templateclass Policy&amp;gt;, nth_element, vad fan är r-value, l-value, r-value reference?  </description>
+    </item>
     
     <item>
       <title>Fråga 1</title>

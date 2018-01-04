@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Programmeringsuppgift 9</title>
+        <style>
+
+    html body {
+        font-family: 'Helvetica', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: brown;
+        --border-width:  0 ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="https://lunk-liu.github.io/tentaplugg//css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica">
+
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script> 
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.31.1" />
+        
+        
+        
+    </head>
+
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+    <body>
+         
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <a class="navbar-brand visible-xs" href="#">Programmeringsuppgift 9</a>
+
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/tentaplugg/">Home</a></li>
+                            
+                                <li><a href="/tentaplugg/post/">Posts</a></li>
+                            
+                                <li><a href="/tentaplugg/tags/">Tags</a></li>
+                            
+                        </ul>
+                    
+
+                    
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+<main>
+
+    
+
+
+
+    <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/160331/assignment9/">Programmeringsuppgift 9</a></h4>
+    <h5>March 31, 2016</h5>
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/programmeringsuppgifter">
+        <kbd class="item-tag">programmeringsuppgifter</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/160331">
+        <kbd class="item-tag">160331</kbd>
+    </a>
+    
+
+</div>
+
+
+
+    <br> <div class="text-justify">
+
+<p>Copy the file given_files/assignment9.cc to your working directory and make changes to that file. Submit your answer as Assignment #9.</p>
+
+<p>This task is divided into two parts, the first giving three of the total five points and the second is worth the two remaining points. You are not supposed to give separate solutions for the two parts, but may stop after implementing the first part.</p>
+
+<p>Your task in this assignment is to create a stream output manipulator to format a container for printing to some ostream. When done, the code in listing 2 shall compile and give output according to Listing 3.</p>
+
+<p><em>Listing 2: Code example for assignment 9</em></p>
+
+<pre><code>int main() {
+    vector&lt;int&gt; vec {2, 5, 1, 7, 10};
+    cout &lt;&lt; format_container () &lt;&lt; vec &lt;&lt; endl ; cout &lt;&lt; format_container(’{’) &lt;&lt; vec &lt;&lt; endl;
+}
+</code></pre>
+
+<pre><code>*Listing 3: output from listing 2*
+[2,5,1,7,10] 
+{2, 5, 1, 7, 10}
+</code></pre>
+
+<p>(a)</p>
+
+<ol>
+<li>Create a simple struct called <code>format_container` with three data members; a  pointer to an</code>ostream``, and starting and ending delimiters. Add a constructor taking a char to set the starting delimiter (it’s enough to support brackets and braces) with brackets being the default.</li>
+<li>Create an output operator that takes an ostream and a <code>format_container</code> that sets the <code>ostream</code> pointer for that <code>format_container</code> and returns it.</li>
+<li>Create another output operator that takes a <code>format_container</code> and a <code>vector</code> and prints the vector on the given stream according to the example above.</li>
+</ol>
+
+<p>(b)</p>
+
+<p>Generalize your second output operator by making it into a template parameterized on the container type. You can assume that there is an existing overload of the output operator for the element type (the type you get when dereferencing an iterator for the given container). After modifications, the code in listing 4 shall compile.</p>
+
+<p><em>Listing 4: Code after generalization</em></p>
+
+<pre><code>list&lt;string&gt; lst{”hi”, ”does”, ”this”, ”work?”}; forward_list&lt;int&gt; fl {3 ,65 ,1 ,8};
+cout &lt;&lt; format_container() &lt;&lt; lst &lt;&lt; ”\n”
+     &lt;&lt; format_container () &lt;&lt; f l &lt;&lt; endl ;
+</code></pre>
+
+<h2 id="given-files">Given Files:</h2>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;list&gt;
+#include &lt;forward_list&gt;
+using namespace std;
+int main()
+{
+    // Part a
+    vector&lt;int&gt; vec {2, 5, 1, 7, 10};
+    cout &lt;&lt; format_container() &lt;&lt; vec &lt;&lt; endl;
+    cout &lt;&lt; format_container('{') &lt;&lt; vec &lt;&lt; endl;
+
+    // part b
+    /*
+    list&lt;string&gt; lst{&quot;hi&quot;, &quot;does&quot;, &quot;this&quot;, &quot;work?&quot;};
+    forward_list&lt;int&gt; fl{3,65,1,8};
+    cout &lt;&lt; format_container() &lt;&lt; lst &lt;&lt; &quot;\n&quot;
+         &lt;&lt; format_container() &lt;&lt; fl &lt;&lt; endl;
+    */
+}
+
+</code></pre>
+
+<h2 id="facit">Facit:</h2>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;list&gt;
+#include &lt;forward_list&gt;
+using namespace std;
+
+struct format_container
+{
+    format_container(char delim='[')
+    {
+        if (delim == '{')
+        {
+            start='{';
+            end = '}';
+        }
+    }
+    char start{'['}, end{']'};
+    mutable ostream * os{};
+};
+
+
+template&lt;typename Container&gt;
+ostream &amp; operator&lt;&lt;(format_container const &amp; cp, Container const &amp; vals)
+{
+    *cp.os &lt;&lt; cp.start;
+    bool first {true};
+    for ( auto &amp;&amp; val : vals )
+    {
+        if ( first )
+            first = false;
+        else
+            *cp.os &lt;&lt; &quot;, &quot;;
+        *cp.os &lt;&lt; val;
+    }
+    return *cp.os &lt;&lt; cp.end;
+}
+
+format_container const &amp; operator&lt;&lt;(ostream &amp; os, format_container const &amp; cp)
+{
+    cp.os = &amp;os;
+    return cp;
+}
+
+int main()
+{
+    vector&lt;int&gt; vals {1,5,2,7,9};
+    cout &lt;&lt; format_container() &lt;&lt; vals &lt;&lt; endl;
+    list&lt;string&gt; lst{&quot;hi&quot;, &quot;does&quot;, &quot;this&quot;, &quot;work?&quot;};
+    forward_list&lt;int&gt; fl{3,65,1,8};
+    cout &lt;&lt; format_container() &lt;&lt; lst &lt;&lt; &quot;\n&quot;
+         &lt;&lt; format_container('{') &lt;&lt; fl &lt;&lt; endl;
+}
+</code></pre>
+</div>
+
+    
+    
+</main>
+
+        <footer>
+
+            <p class="copyright text-muted"> :)</p>
+
+        </footer>
+       
+    </body>
+
+</html>
+

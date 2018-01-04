@@ -4,7 +4,7 @@
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tags</title>
+        <title>Programmeringsuppgift 8</title>
         <style>
 
     html body {
@@ -60,9 +60,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.31.1" />
         
-        <link href="https://lunk-liu.github.io/tentaplugg/tags/index.xml" rel="alternate" type="application/rss+xml" title="TDDD38 tentaplugg #5" />
-        <link href="https://lunk-liu.github.io/tentaplugg/tags/index.xml" rel="feed" type="application/rss+xml" title="TDDD38 tentaplugg #5" />
-        
         
         
     </head>
@@ -80,7 +77,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Tags</a>
+                    <a class="navbar-brand visible-xs" href="#">Programmeringsuppgift 8</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -115,221 +112,103 @@
 
 <main>
 
-    <h2>Tags</h2>
+    
 
-     <div class="item">
 
-    
-    
-    
+
+    <div class="item">
 
     
     
+    
 
-    <h4><a href="/tentaplugg/tags/160331/">160331</a></h4>
+    
+    
+
+    <h4><a href="/tentaplugg/post/160331/assignment8/">Programmeringsuppgift 8</a></h4>
     <h5>March 31, 2016</h5>
     
     
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/programmeringsuppgifter">
+        <kbd class="item-tag">programmeringsuppgifter</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/160331">
+        <kbd class="item-tag">160331</kbd>
+    </a>
     
 
 </div>
-  <div class="item">
 
-    
-    
-    
 
-    
-    
 
-    <h4><a href="/tentaplugg/tags/160602/">160602</a></h4>
-    <h5>June 2, 2016</h5>
-    
-    
-    
+    <br> <div class="text-justify">
 
+<p>Write your code in a file named assignment8.cc and submit your answer as Assignment #8.</p>
+
+<p>In this assignment, you’re supposed to show good knowledge of the standard library. Any usage of standard iteration statements will give point deductions. In each step of your solution, make sure to use the algorithm most suited to solve the task – <code>for_each</code> is not a valid solution for all problems.</p>
+
+<p>Here is a model competitive programming exercise for you to solve according to the algo- rithm presented after the problem text.</p>
+
+<p><strong>Input:</strong> two numbers N and T followed by N integer values separated by spaces (this range is called A), a blank line and T integers.
+<strong>Output:</strong> For each integer t (1&lt;=t&lt;=N) from the T integers, print the sum of the t first integers in A.</p>
+
+<p><strong>Example:</strong></p>
+
+<pre><code>Input: 
+53 15236
+3 1 4
+Output:
+8
+1
+11
+</code></pre>
+
+<p>This task shall be solved in the following way. For each step, do nothing more and nothing less.</p>
+
+<ol>
+<li>Read the two integers <code>N</code> and <code>T</code> using standard formatted input.</li>
+<li>Create a vector, called input_values to store the range <code>A</code>.</li>
+<li>Read the <code>N</code><code>integers and store them in</code><code>input_values</code>`.</li>
+<li>Create a new vector <code>sums</code>.</li>
+<li>Calculate the accumulated sums from <code>input_values</code> so that index <code>i</code> in <code>sums</code> contains the sum of all values of <code>input_values</code> in the index range <code>[0, i]</code>.</li>
+<li>For each of the <code>T</code> remaining integers (it’s okay to read to end of input), print index <code>t-1</code> from <code>sums</code> to <code>cout</code>.
+<br /></li>
+</ol>
+
+<p>Note: To get full marks on this exercise, you must make sure to prohibit unnecessary reallocations of the vectors during input and summation.</p>
+
+<h2 id="facit">Facit:</h2>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;iterator&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main()
+{
+    int N,T;
+    cin &gt;&gt; N &gt;&gt; T;                                                     // 1
+    vector&lt;int&gt; input_values (N);                                      // 2
+    copy_n(istream_iterator&lt;int&gt;{cin}, N, begin(input_values));        // 3
+    vector&lt;int&gt; sums (N);                                              // 4
+    partial_sum(begin(input_values), end(input_values), begin(sums));  // 5
+    for_each(istream_iterator&lt;int&gt;{cin}, istream_iterator&lt;int&gt;{},
+            [=](int t){cout &lt;&lt; sums[t-1] &lt;&lt; endl; });                  // 6
+
+    return 0;
+}
+
+</code></pre>
 </div>
-  <div class="item">
 
     
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/tags/160817/">160817</a></h4>
-    <h5>August 17, 2016</h5>
-    
-    
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/tags/170112/">170112</a></h4>
-    <h5>January 12, 2017</h5>
-    
-    
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/tags/170420/">170420</a></h4>
-    <h5>April 20, 2017</h5>
-    
-    
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/tags/170529/">170529</a></h4>
-    <h5>May 29, 2017</h5>
-    
-    
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/tags/170816/">170816</a></h4>
-    <h5>August 16, 2017</h5>
-    
-    
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/tags/c&#43;&#43;/">C&#43;&#43;</a></h4>
-    <h5>January 4, 2018</h5>
-    
-    
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/tags/inget/">Inget</a></h4>
-    <h5>January 1, 0001</h5>
-    
-    
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/tags/plugg/">Plugg</a></h4>
-    <h5>January 4, 2018</h5>
-    
-    
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/tags/programmeringsuppgifter/">Programmeringsuppgifter</a></h4>
-    <h5>March 31, 2016</h5>
-    
-    
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/tags/teorifr%C3%A5gor/">Teorifrågor</a></h4>
-    <h5>August 16, 2017</h5>
-    
-    
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/tags/todo/">Todo</a></h4>
-    <h5>January 4, 2018</h5>
-    
-    
-    
-
-</div>
- 
     
 </main>
-
-
 
         <footer>
 

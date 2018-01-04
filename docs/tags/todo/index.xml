@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Todo on TDDD38 tentaplugg #5</title>
+    <link>https://lunk-liu.github.io/tentaplugg/tags/todo/</link>
+    <description>Recent content in Todo on TDDD38 tentaplugg #5</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://lunk-liu.github.io/tentaplugg/tags/todo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Todo</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/plugga/todo/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/plugga/todo/</guid>
+      <description> Allt det här med konstruktorer i polymorfa klasshierkier template templates nöta in dynamic_cast och typeid, templateclass Policy&amp;gt;, nth_element, vad fan är r-value, l-value, r-value reference?  </description>
+    </item>
+    
+  </channel>
+</rss>

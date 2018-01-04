@@ -435,5 +435,38 @@ double d ;
 There are a lot of possible combinations that gives points in Yahtzee, but in this exercise we are going to support checking for a number of ones, number of twos and one pair (two dice with the same result) in a given set of dice.</description>
     </item>
     
+    <item>
+      <title>Programmeringsuppgift 7</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160331/assignment7/</link>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160331/assignment7/</guid>
+      <description>Copy the file given_files/assignment7.cc to your working directory and make changes to your copy. Submit your answer as Assignment #7.
+There is a function that works a bit like the standard algorithm std::find (but much simpler).
+int * Find(int * start, int * end, int val) { for ( auto it = start; it != end; ++it ) { if ( *it == val ) { return it; } } } return end; // wasn&#39;t found  Your task is to do the following modifications to the given function so that the commented lines in the given code compile and give output according to the comments.</description>
+    </item>
+    
+    <item>
+      <title>Programmeringsuppgift 8</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160331/assignment8/</link>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160331/assignment8/</guid>
+      <description>Write your code in a file named assignment8.cc and submit your answer as Assignment #8.
+In this assignment, you’re supposed to show good knowledge of the standard library. Any usage of standard iteration statements will give point deductions. In each step of your solution, make sure to use the algorithm most suited to solve the task – for_each is not a valid solution for all problems.
+Here is a model competitive programming exercise for you to solve according to the algo- rithm presented after the problem text.</description>
+    </item>
+    
+    <item>
+      <title>Programmeringsuppgift 9</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160331/assignment9/</link>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160331/assignment9/</guid>
+      <description>Copy the file given_files/assignment9.cc to your working directory and make changes to that file. Submit your answer as Assignment #9.
+This task is divided into two parts, the first giving three of the total five points and the second is worth the two remaining points. You are not supposed to give separate solutions for the two parts, but may stop after implementing the first part.
+Your task in this assignment is to create a stream output manipulator to format a container for printing to some ostream.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -9,19 +9,19 @@ draft: false
 class String
 {
 public:
-using size_type = std::size_t;      // nested type (alias declaration)
-String() = default;                 // default constructor, compiler generated
-String(const String&);              // copy constructor
-String(String&&) noexcept ;         // move constructor
-String(const char*);                // type converting constructor, from C string
-~String();                          // destructor
+    using size_type = std::size_t;      // nested type (alias declaration)
+    String() = default;                 // default constructor, compiler generated
+    String(const String&);              // copy constructor
+    String(String&&) noexcept ;         // move constructor
+    String(const char*);                // type converting constructor, from C string
+    ~String();                          // destructor
 
-String& operator=(const String&) &;     // copy assignment operator, ref-qualifier (lvalues only)
-String& operator=(String&&) & noexcept; // move assignment operator
-String& operator=(const char*) &;   // type converting assignment operator
+    String& operator=(const String&) &;     // copy assignment operator, ref-qualifier (lvalues only)
+    String& operator=(String&&) & noexcept; // move assignment operator
+    String& operator=(const char*) &;   // type converting assignment operator
 
-size_type length() const;           // const member function – accessor function
-// ...
+    size_type length() const;           // const member function – accessor function
+    // ...
 };
 
 ```

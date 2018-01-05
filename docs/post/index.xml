@@ -31,6 +31,15 @@ Constructor delegation Att en konstruktor utnytjar en annan konstruktor för att
     </item>
     
     <item>
+      <title>Polymorfism</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/plugga/polymorfism/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/plugga/polymorfism/</guid>
+      <description>/* * Person.h */ #ifndef PERSON_H #define PERSON_H #include &amp;quot;CRN.h&amp;quot; #include &amp;lt;iosfwd&amp;gt; #include &amp;lt;string&amp;gt; namespace IDA_Person { class Person { public: virtual ~Person() = default; virtual Person* clone() const = 0; virtual std::string str() const { return name_ + &#39; &#39; + crn_.str(); } std::string get_name() const { return name_; } void set_name(const std::string&amp;amp; name) { name_ = name; } CRN get_crn() const { return crn_; } void set_crn(const CRN&amp;amp; crn) { crn_ = crn; } protected: Person(const std::string&amp;amp; name, const CRN&amp;amp; crn) : name_{ name }, crn_{ crn } {}; Person(const Person&amp;amp;) = default; Person(Person &amp;amp;&amp;amp;) = default; private: Person&amp;amp; operator=(const Person&amp;amp;) = delete; std::string name_; CRN crn_; }; std::ostream&amp;amp; operator&amp;lt;&amp;lt;(std::ostream&amp;amp;, const Person&amp;amp;); } // namespace IDA_Person #endif  </description>
+    </item>
+    
+    <item>
       <title>Todo</title>
       <link>https://lunk-liu.github.io/tentaplugg/post/plugga/todo/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>

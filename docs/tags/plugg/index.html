@@ -58,7 +58,7 @@
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.31.1" />
+ <meta name="generator" content="Hugo 0.31" />
         
         <link href="https://lunk-liu.github.io/tentaplugg/tags/plugg/index.xml" rel="alternate" type="application/rss+xml" title="TDDD38 tentaplugg #5" />
         <link href="https://lunk-liu.github.io/tentaplugg/tags/plugg/index.xml" rel="feed" type="application/rss+xml" title="TDDD38 tentaplugg #5" />
@@ -128,8 +128,6 @@
 
     <h4><a href="/tentaplugg/post/plugga/klasser/">Konstruktorer osv</a></h4>
     <h5>January 4, 2018</h5>
-    class String { public: using size_type = std::size_t; // nested type (alias declaration) String() = default; // default constructor, compiler generated String(const String&amp;); // copy constructor String(String&amp;&amp;) noexcept ; // move constructor String(const char*); // type converting constructor, from C string ~String(); // destructor String&amp; operator=(const String&amp;) &amp;; // copy assignment operator, ref-qualifier (lvalues only) String&amp; operator=(String&amp;&amp;) &amp; noexcept; // move assignment operator String&amp; operator=(const char*) &amp;; // type converting assignment operator size_type length() const; // const member function – accessor function // .
-    
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -152,9 +150,28 @@
 
     <h4><a href="/tentaplugg/post/plugga/kort_och_gott/">Kort och gott</a></h4>
     <h5>January 4, 2018</h5>
-    rvalue The name rule: If it has a name it’s an lvalue, otherwise it&rsquo;s a rvalue.
-Constructor delegation Att en konstruktor utnytjar en annan konstruktor för att utföra sitt jobb. Tex Child(int x) : Parent{x} {};, eller String() : String{ &quot;&quot; } {};
     
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/plugg">
+        <kbd class="item-tag">plugg</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/plugga/polymorfism/">Polymorfism</a></h4>
+    <h5>January 4, 2018</h5>
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -177,8 +194,6 @@ Constructor delegation Att en konstruktor utnytjar en annan konstruktor för att
 
     <h4><a href="/tentaplugg/post/plugga/todo/">Todo</a></h4>
     <h5>January 4, 2018</h5>
-     Allt det här med konstruktorer i polymorfa klasshierkier template templates nöta in dynamic_cast och typeid, templateclass Policy&gt;, nth_element, vad fan är r-value, l-value, r-value reference?  
-    
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -196,14 +211,13 @@ Constructor delegation Att en konstruktor utnytjar en annan konstruktor för att
 </div>
  
 
-    
 </main>
 
 
 
         <footer>
 
-            <p class="copyright text-muted"> :)</p>
+            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
 
         </footer>
        

@@ -4,7 +4,7 @@
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>C&#43;&#43;</title>
+        <title>Programmeringsuppgift 7</title>
         <style>
 
     html body {
@@ -60,9 +60,6 @@
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
  <meta name="generator" content="Hugo 0.31" />
         
-        <link href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;/index.xml" rel="alternate" type="application/rss+xml" title="TDDD38 tentaplugg #5" />
-        <link href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;/index.xml" rel="feed" type="application/rss+xml" title="TDDD38 tentaplugg #5" />
-        
         
         
     </head>
@@ -80,7 +77,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">C&#43;&#43;</a>
+                    <a class="navbar-brand visible-xs" href="#">Programmeringsuppgift 7</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -115,9 +112,7 @@
 
 <main>
 
-    <h2>C&#43;&#43;</h2>
-
-     <div class="item">
+    <div class="item">
 
     
     
@@ -126,19 +121,134 @@
     
     
 
-    <h4><a href="/tentaplugg/post/160331/5/">Fråga 5</a></h4>
-    <h5>March 31, 2016</h5>
+    <h4><a href="/tentaplugg/post/160602/upg7/">Programmeringsuppgift 7</a></h4>
+    <h5>June 2, 2016</h5>
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
     </a>
     
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
-        <kbd class="item-tag">teorifrågor</kbd>
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/programmeringsuppgifter">
+        <kbd class="item-tag">programmeringsuppgifter</kbd>
     </a>
     
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/160331">
-        <kbd class="item-tag">160331</kbd>
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/160602">
+        <kbd class="item-tag">160602</kbd>
+    </a>
+    
+
+</div>
+
+
+    <br> <div class="text-justify">
+
+<p>Copy the file assignment7.cc from given_files and make additions to your copy. Submit your solution as Assignment #7.</p>
+
+<p>In this exercise, it’s extra important for you to use the standard library in a good way. To get full marks, use the correct algorithm for the given task – <code>for_each</code> is not a valid solution for all tasks and you won’t need any hand-rolled loops.</p>
+
+<p>The given file has a simple function to test if a value is a prime number and a simple type alias called <code>num_type</code>.
+Your task is to create a program that generates a random number with its prime factors by following the algorithm below.</p>
+
+<ol>
+<li>Create a <code>vector&lt;num_type&gt;</code> with space for 10 elements</li>
+<li>Fill the vector with random values in the range <code>[2, 75]</code></li>
+<li>Remove (with the help of the given <code>is_prime</code> function) the numbers that aren’t prime numbers</li>
+<li>Sort the remaining values</li>
+<li>Print the remaining numbers to standard output</li>
+<li>Calculate the product of the remaining numbers</li>
+<li>Print the product to standard output</li>
+</ol>
+
+<h2 id="given-files">Given files:</h2>
+
+<pre><code>using num_type = unsigned long long;
+
+bool is_prime(num_type val, num_type divisor=2)
+{
+    if ( divisor*divisor &gt; val )
+    {
+        return true;
+    }
+    if ( val % divisor == 0 )
+    {
+        return false;
+    }
+    return is_prime(val, ++divisor);
+}
+
+</code></pre>
+
+<h2 id="facit">Facit:</h2>
+
+<pre><code>#include &lt;functional&gt;
+#include &lt;iostream&gt;
+#include &lt;iterator&gt;
+#include &lt;algorithm&gt;
+#include &lt;random&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+using num_type = unsigned long long;
+
+constexpr bool is_prime(num_type val, num_type divisor=2)
+{
+    if ( divisor*divisor &gt; val )
+    {
+        return true;
+    }
+    if ( val % divisor == 0 )
+    {
+        return false;
+    }
+    return is_prime(val, ++divisor);
+}
+
+int main()
+{
+    vector&lt;num_type&gt; vals(10);
+    random_device rnd;
+    uniform_int_distribution&lt;num_type&gt; dist{2,75};
+    generate(begin(vals), end(vals),bind(dist,ref(rnd)));
+    vals.erase(remove_if(begin(vals), end(vals),
+                         [](num_type val){return !is_prime(val);}),
+               end(vals));
+    sort(begin(vals), end(vals));
+    copy(begin(vals), end(vals), ostream_iterator&lt;num_type&gt;{cout,&quot; &quot;});
+    cout &lt;&lt; accumulate(begin(vals),end(vals),1,multiplies&lt;&gt;{})&lt;&lt;endl;
+}
+
+</code></pre>
+</div>
+
+    
+    
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/plugga/todo/">Todo</a></h4>
+    <h5>January 4, 2018</h5>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/todo">
+        <kbd class="item-tag">todo</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/plugg">
+        <kbd class="item-tag">plugg</kbd>
     </a>
     
 
@@ -152,19 +262,15 @@
     
     
 
-    <h4><a href="/tentaplugg/post/160331/assignment6/">Programmeringsuppgift 6</a></h4>
-    <h5>March 31, 2016</h5>
+    <h4><a href="/tentaplugg/post/plugga/polymorfism/">Polymorfism</a></h4>
+    <h5>January 4, 2018</h5>
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
     </a>
     
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/programmeringsuppgifter">
-        <kbd class="item-tag">programmeringsuppgifter</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/160331">
-        <kbd class="item-tag">160331</kbd>
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/plugg">
+        <kbd class="item-tag">plugg</kbd>
     </a>
     
 
@@ -178,92 +284,26 @@
     
     
 
-    <h4><a href="/tentaplugg/post/160331/assignment7/">Programmeringsuppgift 7</a></h4>
-    <h5>March 31, 2016</h5>
+    <h4><a href="/tentaplugg/post/plugga/kort_och_gott/">Kort och gott</a></h4>
+    <h5>January 4, 2018</h5>
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
     </a>
     
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/programmeringsuppgifter">
-        <kbd class="item-tag">programmeringsuppgifter</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/160331">
-        <kbd class="item-tag">160331</kbd>
-    </a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/post/160331/assignment8/">Programmeringsuppgift 8</a></h4>
-    <h5>March 31, 2016</h5>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
-        <kbd class="item-tag">c&#43;&#43;</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/programmeringsuppgifter">
-        <kbd class="item-tag">programmeringsuppgifter</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/160331">
-        <kbd class="item-tag">160331</kbd>
-    </a>
-    
-
-</div>
-  <div class="item">
-
-    
-    
-    
-
-    
-    
-
-    <h4><a href="/tentaplugg/post/160331/assignment9/">Programmeringsuppgift 9</a></h4>
-    <h5>March 31, 2016</h5>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
-        <kbd class="item-tag">c&#43;&#43;</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/programmeringsuppgifter">
-        <kbd class="item-tag">programmeringsuppgifter</kbd>
-    </a>
-    
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/160331">
-        <kbd class="item-tag">160331</kbd>
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/plugg">
+        <kbd class="item-tag">plugg</kbd>
     </a>
     
 
 </div>
  
 
-</main>
-
-
-
-<div class="pages">
+    
 
     
-    <a class="icon pages-icon" href="/tentaplugg/tags/c&#43;&#43;/page/8/" rel="prev">
-        <i class="fa fa-arrow-left"></i>
-    </a>
-     
 
-</div>
-
-
+</main>
 
         <footer>
 

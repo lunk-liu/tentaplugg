@@ -4,7 +4,7 @@
          
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Programmeringsuppgift 8</title>
+        <title>Fråga 6</title>
         <style>
 
     html body {
@@ -77,7 +77,7 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">Programmeringsuppgift 8</a>
+                    <a class="navbar-brand visible-xs" href="#">Fråga 6</a>
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
@@ -121,8 +121,8 @@
     
     
 
-    <h4><a href="/tentaplugg/post/160331/assignment8/">Programmeringsuppgift 8</a></h4>
-    <h5>March 31, 2016</h5>
+    <h4><a href="/tentaplugg/post/160602/upg6/">Fråga 6</a></h4>
+    <h5>June 2, 2016</h5>
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -132,8 +132,8 @@
         <kbd class="item-tag">programmeringsuppgifter</kbd>
     </a>
     
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/160331">
-        <kbd class="item-tag">160331</kbd>
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/160602">
+        <kbd class="item-tag">160602</kbd>
     </a>
     
 
@@ -142,63 +142,139 @@
 
     <br> <div class="text-justify">
 
-<p>Write your code in a file named assignment8.cc and submit your answer as Assignment #8.</p>
-
-<p>In this assignment, you’re supposed to show good knowledge of the standard library. Any usage of standard iteration statements will give point deductions. In each step of your solution, make sure to use the algorithm most suited to solve the task – <code>for_each</code> is not a valid solution for all problems.</p>
-
-<p>Here is a model competitive programming exercise for you to solve according to the algorithm presented after the problem text.</p>
+<p>Copy the file <strong>assignment6.cc</strong> from <strong>given_files</strong> and make additions to your copy. Submit your solution as <strong>Assignment #6</strong>.
+There is a built-in problem with some of the integral types, <strong>int</strong> in particular, in that we get undefined beavior when going outside the range of the type. Your task in this assignment is to create a type <code>Modular</code> that is templated on the internal storage type and the value range (given as two template non-type parameters). The value range shall be defaulted as the default value range for the given type given by <code>numeric_limits</code> from the <code>&lt;limits&gt;</code> header. Your class shall support the following operations:</p>
 
 <ul>
-<li><p><strong>Input:</strong> two numbers N and T followed by N integer values separated by spaces (this range is called A), a blank line and T integers.</p></li>
-
-<li><p><strong>Output:</strong> For each integer t (1&lt;=t&lt;=N) from the T integers, print the sum of the t first integers in A.</p></li>
+<li>Explicit constructor for the underlying type. If the value given is outside the current value range, the value shall be set to the lowest value.</li>
+<li>Assignment from underlying type. If the value is outside the value range, the assign- ment shall not modify the object but throw an `<code>std::domain_error</code> exception.</li>
+<li>Implicit conversion to the underlying type.</li>
+<li>Incrementing operators (both postfix and prefix versions) to step the value by one.</li>
+<li>Addition with another Modular object, possibly having another value range. The value range of the result shall be the same as the left hand side object.
+The given file has a main program that tests these operations.</li>
 </ul>
 
-<p><strong>Example:</strong></p>
+<h2 id="given-files">given files:</h2>
 
-<pre><code>Input: 
-53 15236
-3 1 4
-Output:
-8
-1
-11
-</code></pre>
-
-<p>This task shall be solved in the following way. For each step, do nothing more and nothing less.</p>
-
-<ol>
-<li>Read the two integers <code>N</code> and <code>T</code> using standard formatted input.</li>
-<li>Create a vector, called <strong>input_values</strong> to store the range <code>A</code>.</li>
-<li>Read the <code>N</code> integers and store them in <code>input_values</code>.</li>
-<li>Create a new vector <code>sums</code>.</li>
-<li>Calculate the accumulated sums from <code>input_values</code> so that index <code>i</code> in <code>sums</code> contains the sum of all values of <code>input_values</code> in the index range <code>[0, i]</code>.</li>
-<li>For each of the <code>T</code> remaining integers (it’s okay to read to end of input), print index <code>t-1</code> from <code>sums</code> to <code>cout</code>.
-<br /></li>
-</ol>
-
-<p>Note: To get full marks on this exercise, you must make sure to prohibit unnecessary reallocations of the vectors during input and summation.</p>
-
-<h2 id="facit">Facit:</h2>
-
-<pre><code>#include &lt;iostream&gt;
-#include &lt;iterator&gt;
-#include &lt;algorithm&gt;
+<pre><code>#include &lt;stdexcept&gt;
+#include &lt;iostream&gt;
 using namespace std;
 
 int main()
 {
-    int N,T;
-    cin &gt;&gt; N &gt;&gt; T;                                                     // 1
-    vector&lt;int&gt; input_values (N);                                      // 2
-    copy_n(istream_iterator&lt;int&gt;{cin}, N, begin(input_values));        // 3
-    vector&lt;int&gt; sums (N);                                              // 4
-    partial_sum(begin(input_values), end(input_values), begin(sums));  // 5
-    for_each(istream_iterator&lt;int&gt;{cin}, istream_iterator&lt;int&gt;{},
-            [=](int t){cout &lt;&lt; sums[t-1] &lt;&lt; endl; });                  // 6
-
-    return 0;
+    Modular&lt;int, 2, 10&gt; m{3};
+    cout &lt;&lt; m &lt;&lt; endl;
+    try
+    {
+        m = 1;
+    }
+    catch ( std::domain_error const &amp; e)
+    {
+        cout &lt;&lt; e.what() &lt;&lt; endl;
+    }
+    Modular&lt;int, 2,10&gt; m2 {5};
+    m = m + m2;
+    cout &lt;&lt; m &lt;&lt; endl;
+    m = m + Modular&lt;int,-11,-2&gt;{-10};
+    cout &lt;&lt; &quot;Should be 7: &quot; &lt;&lt; m &lt;&lt; endl;
+    cout &lt;&lt; &quot;Should print 7 9: &quot; &lt;&lt; m++ &lt;&lt; &quot; &quot;;
+    cout &lt;&lt; ++m;
+    Modular&lt;char,'a','c'&gt; mc{'b'};
+    ++mc;
+    cout &lt;&lt; &quot;\nShould print a: &quot; &lt;&lt; ++mc &lt;&lt; endl;
 }
+</code></pre>
+
+<h2 id="facit">Facit:</h2>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;limits&gt;
+using namespace std;
+
+template &lt;typename T, T min=numeric_limits&lt;T&gt;::min(), T max=numeric_limits&lt;T&gt;::max()&gt;
+class Modular
+{
+public:
+    explicit Modular(T n) 
+      : val{n}
+    {
+        if ( n &lt; min || n &gt; max )
+            val = min; 
+    }
+    Modular &amp; operator=(T const &amp; n)
+    {
+        if ( n &lt; min || n &gt; max)
+           throw domain_error{&quot;Value out of range&quot;};
+        val = n;
+        return *this;
+    }
+    operator T() const
+    {
+        return val;
+    }
+
+    template &lt;T o_min, T o_max&gt;
+        Modular&lt;T,min,max&gt; operator+(Modular&lt;T,o_min,o_max&gt; const &amp; rhs) const
+        {
+            Modular&lt;T,min,max&gt; m{adjust(val+rhs)};
+            return m;
+        }
+    
+    Modular&lt;T,min,max&gt; &amp; operator++()
+    {
+        if ( val == max )
+            val = min;
+        else
+            ++val;
+        return *this;
+    }
+    Modular&lt;T,min,max&gt; operator++(int)
+    {
+        auto tmp = *this;
+        ++*this;
+        return tmp;
+    }
+private:
+    T adjust(T n) const
+    {
+        if ( n &lt; max &amp;&amp; n &gt; min )
+        {
+            return n;
+        }
+        else if (n &gt; max )
+        {
+            return min + n - max - 1;
+        }
+
+        return max + n - min + 1;
+    }
+    T val;
+};
+
+int main()
+{
+    Modular&lt;int, 2, 10&gt; m{3};
+    cout &lt;&lt; m &lt;&lt; endl;
+    try
+    {
+        m = 1;
+    }
+    catch ( std::domain_error const &amp; e)
+    {
+        cout &lt;&lt; e.what() &lt;&lt; endl;
+    }
+    Modular&lt;int, 2,10&gt; m2 {5};
+    m = m + m2;
+    cout &lt;&lt; m &lt;&lt; endl;
+    m = m + Modular&lt;int,-11,-2&gt;{-10};
+    cout &lt;&lt; &quot;Should be 7: &quot; &lt;&lt; m &lt;&lt; endl;
+    cout &lt;&lt; &quot;Should print 7 9: &quot; &lt;&lt; m++ &lt;&lt; &quot; &quot;;
+    cout &lt;&lt; ++m;
+    Modular&lt;char,'a','c'&gt; mc{'b'};
+    ++mc;
+    cout &lt;&lt; &quot;\nShould print a: &quot; &lt;&lt; ++mc &lt;&lt; endl;
+}
+
 
 </code></pre>
 </div>

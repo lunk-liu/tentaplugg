@@ -6,10 +6,41 @@
     <description>Recent content in Programmeringsuppgifter on TDDD38 tentaplugg #5</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Mar 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jun 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lunk-liu.github.io/tentaplugg/tags/programmeringsuppgifter/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fråga 6</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160602/upg6/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160602/upg6/</guid>
+      <description>Copy the file assignment6.cc from given_files and make additions to your copy. Submit your solution as Assignment #6. There is a built-in problem with some of the integral types, int in particular, in that we get undefined beavior when going outside the range of the type. Your task in this assignment is to create a type Modular that is templated on the internal storage type and the value range (given as two template non-type parameters).</description>
+    </item>
+    
+    <item>
+      <title>Programmeringsuppgift 7</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160602/upg7/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160602/upg7/</guid>
+      <description>Copy the file assignment7.cc from given_files and make additions to your copy. Submit your solution as Assignment #7.
+In this exercise, it’s extra important for you to use the standard library in a good way. To get full marks, use the correct algorithm for the given task – for_each is not a valid solution for all tasks and you won’t need any hand-rolled loops.
+The given file has a simple function to test if a value is a prime number and a simple type alias called num_type.</description>
+    </item>
+    
+    <item>
+      <title>Programmeringsuppgift 7</title>
+      <link>https://lunk-liu.github.io/tentaplugg/post/160602/upg8/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lunk-liu.github.io/tentaplugg/post/160602/upg8/</guid>
+      <description>Copy assignment8.cc from given_files to your working directory. Add your own code according to instructions below and submit as Assignment #8.
+The following function for sorting int values in range [begin, end) is given:
+void sort(int* begin, int* end) { for ( ; begin +1 != end; ++begin) { int* min = begin; for (int* pos = begin + 1; pos != end; ++pos) if (*pos &amp;lt; *min) min = pos; std::iter_swap(begin, min); } }  It could be used as follows for sorting the elements of an array:</description>
+    </item>
     
     <item>
       <title>Programmeringsuppgift 6</title>
@@ -40,7 +71,7 @@ int * Find(int * start, int * end, int val) { for ( auto it = start; it != end; 
       <guid>https://lunk-liu.github.io/tentaplugg/post/160331/assignment8/</guid>
       <description>Write your code in a file named assignment8.cc and submit your answer as Assignment #8.
 In this assignment, you’re supposed to show good knowledge of the standard library. Any usage of standard iteration statements will give point deductions. In each step of your solution, make sure to use the algorithm most suited to solve the task – for_each is not a valid solution for all problems.
-Here is a model competitive programming exercise for you to solve according to the algo- rithm presented after the problem text.</description>
+Here is a model competitive programming exercise for you to solve according to the algorithm presented after the problem text.</description>
     </item>
     
     <item>

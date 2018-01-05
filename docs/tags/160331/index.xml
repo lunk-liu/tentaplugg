@@ -98,7 +98,7 @@ int * Find(int * start, int * end, int val) { for ( auto it = start; it != end; 
       <guid>https://lunk-liu.github.io/tentaplugg/post/160331/assignment8/</guid>
       <description>Write your code in a file named assignment8.cc and submit your answer as Assignment #8.
 In this assignment, you’re supposed to show good knowledge of the standard library. Any usage of standard iteration statements will give point deductions. In each step of your solution, make sure to use the algorithm most suited to solve the task – for_each is not a valid solution for all problems.
-Here is a model competitive programming exercise for you to solve according to the algo- rithm presented after the problem text.</description>
+Here is a model competitive programming exercise for you to solve according to the algorithm presented after the problem text.</description>
     </item>
     
     <item>

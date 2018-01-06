@@ -58,7 +58,7 @@
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.31" />
+ <meta name="generator" content="Hugo 0.31.1" />
         
         <link href="https://lunk-liu.github.io/tentaplugg/tags/170420/index.xml" rel="alternate" type="application/rss+xml" title="TDDD38 tentaplugg #5" />
         <link href="https://lunk-liu.github.io/tentaplugg/tags/170420/index.xml" rel="feed" type="application/rss+xml" title="TDDD38 tentaplugg #5" />
@@ -128,6 +128,19 @@
 
     <h4><a href="/tentaplugg/post/170420/1/">Fråga 1</a></h4>
     <h5>April 20, 2017</h5>
+    <p>Given the following snippet of code, give a reason for having the using declaration on line
+4 instead of qualifying the call on line 5 (i.e. return <strong>std::begin(range)</strong>).</p>
+
+<pre><code>template &lt;typename Range &gt;
+auto iter( Range &amp;&amp; range )
+{
+    using std :: begin ;
+    return begin ( range ); // line 5
+}
+</code></pre>
+
+<p></p>
+    
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -154,6 +167,15 @@
 
     <h4><a href="/tentaplugg/post/170420/2/">Fråga 2</a></h4>
     <h5>April 20, 2017</h5>
+    <p>Given the following primary template declaration, give a declaration of a specialization of
+<strong>foo</strong> for type <strong>char</strong>.</p>
+
+<pre><code>template &lt;typename T&gt;
+struct foo;
+</code></pre>
+
+<p></p>
+    
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -180,6 +202,13 @@
 
     <h4><a href="/tentaplugg/post/170420/3/">Fråga 3</a></h4>
     <h5>April 20, 2017</h5>
+    <p>Assuming v is a <strong>std::vector&lt;int&gt;</strong>, why is the following code wrong?</p>
+
+<pre><code>static_assert (v.size () &gt; 0, &quot; vector is empty !&quot;);
+</code></pre>
+
+<p></p>
+    
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -206,6 +235,10 @@
 
     <h4><a href="/tentaplugg/post/170420/4/">Fråga 4</a></h4>
     <h5>April 20, 2017</h5>
+    Assume you have definitions for the following functions:
+void fun(int , short ); void fun(int , double );  The call fun(2,3) will give an ambiguous overload. Why?
+Answer: The problem is (of course) due to type conversions. An int can be implicitly converted to both double and short and both will give possible loss of precision.
+    
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -232,6 +265,17 @@
 
     <h4><a href="/tentaplugg/post/170420/5/">Fråga 5</a></h4>
     <h5>April 20, 2017</h5>
+    <p>Describe what length below does and give a valid example of a call to length.</p>
+
+<pre><code>template &lt;typename ... Args &gt;
+int length (Args &amp;&amp; ... args)
+{
+    return sizeof ...( args );
+}
+</code></pre>
+
+<p></p>
+    
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -249,13 +293,14 @@
 </div>
  
 
+    
 </main>
 
 
 
         <footer>
 
-            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+            <p class="copyright text-muted"> :)</p>
 
         </footer>
        

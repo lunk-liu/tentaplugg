@@ -58,7 +58,7 @@
 
 
 <script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.31" />
+ <meta name="generator" content="Hugo 0.31.1" />
         
         <link href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%C3%A5gor/index.xml" rel="alternate" type="application/rss+xml" title="TDDD38 tentaplugg #5" />
         <link href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%C3%A5gor/index.xml" rel="feed" type="application/rss+xml" title="TDDD38 tentaplugg #5" />
@@ -126,8 +126,21 @@
     
     
 
-    <h4><a href="/tentaplugg/post/170529/1/">Fråga 1</a></h4>
-    <h5>May 29, 2017</h5>
+    <h4><a href="/tentaplugg/post/170420/1/">Fråga 1</a></h4>
+    <h5>April 20, 2017</h5>
+    <p>Given the following snippet of code, give a reason for having the using declaration on line
+4 instead of qualifying the call on line 5 (i.e. return <strong>std::begin(range)</strong>).</p>
+
+<pre><code>template &lt;typename Range &gt;
+auto iter( Range &amp;&amp; range )
+{
+    using std :: begin ;
+    return begin ( range ); // line 5
+}
+</code></pre>
+
+<p></p>
+    
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -137,8 +150,8 @@
         <kbd class="item-tag">teorifrågor</kbd>
     </a>
     
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/170529">
-        <kbd class="item-tag">170529</kbd>
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/170420">
+        <kbd class="item-tag">170420</kbd>
     </a>
     
 
@@ -152,8 +165,17 @@
     
     
 
-    <h4><a href="/tentaplugg/post/170529/2/">Fråga 2</a></h4>
-    <h5>May 29, 2017</h5>
+    <h4><a href="/tentaplugg/post/170420/2/">Fråga 2</a></h4>
+    <h5>April 20, 2017</h5>
+    <p>Given the following primary template declaration, give a declaration of a specialization of
+<strong>foo</strong> for type <strong>char</strong>.</p>
+
+<pre><code>template &lt;typename T&gt;
+struct foo;
+</code></pre>
+
+<p></p>
+    
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -163,8 +185,8 @@
         <kbd class="item-tag">teorifrågor</kbd>
     </a>
     
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/170529">
-        <kbd class="item-tag">170529</kbd>
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/170420">
+        <kbd class="item-tag">170420</kbd>
     </a>
     
 
@@ -178,8 +200,15 @@
     
     
 
-    <h4><a href="/tentaplugg/post/170529/3/">Fråga 3</a></h4>
-    <h5>May 29, 2017</h5>
+    <h4><a href="/tentaplugg/post/170420/3/">Fråga 3</a></h4>
+    <h5>April 20, 2017</h5>
+    <p>Assuming v is a <strong>std::vector&lt;int&gt;</strong>, why is the following code wrong?</p>
+
+<pre><code>static_assert (v.size () &gt; 0, &quot; vector is empty !&quot;);
+</code></pre>
+
+<p></p>
+    
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -189,8 +218,8 @@
         <kbd class="item-tag">teorifrågor</kbd>
     </a>
     
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/170529">
-        <kbd class="item-tag">170529</kbd>
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/170420">
+        <kbd class="item-tag">170420</kbd>
     </a>
     
 
@@ -204,8 +233,12 @@
     
     
 
-    <h4><a href="/tentaplugg/post/170529/4/">Fråga 4</a></h4>
-    <h5>May 29, 2017</h5>
+    <h4><a href="/tentaplugg/post/170420/4/">Fråga 4</a></h4>
+    <h5>April 20, 2017</h5>
+    Assume you have definitions for the following functions:
+void fun(int , short ); void fun(int , double );  The call fun(2,3) will give an ambiguous overload. Why?
+Answer: The problem is (of course) due to type conversions. An int can be implicitly converted to both double and short and both will give possible loss of precision.
+    
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -215,8 +248,8 @@
         <kbd class="item-tag">teorifrågor</kbd>
     </a>
     
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/170529">
-        <kbd class="item-tag">170529</kbd>
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/170420">
+        <kbd class="item-tag">170420</kbd>
     </a>
     
 
@@ -230,8 +263,19 @@
     
     
 
-    <h4><a href="/tentaplugg/post/170529/5/">Fråga 5</a></h4>
-    <h5>May 29, 2017</h5>
+    <h4><a href="/tentaplugg/post/170420/5/">Fråga 5</a></h4>
+    <h5>April 20, 2017</h5>
+    <p>Describe what length below does and give a valid example of a call to length.</p>
+
+<pre><code>template &lt;typename ... Args &gt;
+int length (Args &amp;&amp; ... args)
+{
+    return sizeof ...( args );
+}
+</code></pre>
+
+<p></p>
+    
     
     <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
         <kbd class="item-tag">c&#43;&#43;</kbd>
@@ -241,37 +285,197 @@
         <kbd class="item-tag">teorifrågor</kbd>
     </a>
     
-    <a href="https://lunk-liu.github.io/tentaplugg/tags/170529">
-        <kbd class="item-tag">170529</kbd>
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/170420">
+        <kbd class="item-tag">170420</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/170112/1/">Fråga 1</a></h4>
+    <h5>January 12, 2017</h5>
+    <p>The standard library has a function <strong>std::addressof</strong> that is used in generic code to find
+the address of an object. Usually, the <strong>operator &amp;</strong> is used for finding addresses of objects,
+why do you think they added a function as well?
+</p>
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/170112">
+        <kbd class="item-tag">170112</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/170112/2/">Fråga 2</a></h4>
+    <h5>January 12, 2017</h5>
+    <p>A forwarding reference and an r-value reference are declared in the same way (<strong>Type &amp;&amp;</strong>),
+but are semantically very different. Why?
+</p>
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/170112">
+        <kbd class="item-tag">170112</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/170112/3/">Fråga 3</a></h4>
+    <h5>January 12, 2017</h5>
+    <p>C++14 added generic lambdas. Give an example of a generic lambda and give a definition
+of a function object class that is equivalent to the compiler-generated closure object created
+by your lambda.
+</p>
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/170112">
+        <kbd class="item-tag">170112</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/170112/4/">Fråga 4</a></h4>
+    <h5>January 12, 2017</h5>
+    <p>Why shouldn’t you use <strong>operator&lt;</strong> when comparing iterators in the code below (container
+is some sort of STL container):
+</p>
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/170112">
+        <kbd class="item-tag">170112</kbd>
+    </a>
+    
+
+</div>
+  <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/tentaplugg/post/160817/1/">Fråga 1</a></h4>
+    <h5>August 17, 2016</h5>
+    <p>Consider the following function. Why is this interface a bad design? (hint, think about ownership&hellip;)</p>
+
+<pre><code>X* compute( /*some args*/ ) {
+    X* res = new X{};
+    // do something with res 
+    return res;
+}
+</code></pre>
+
+<p></p>
+    
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/c&#43;&#43;">
+        <kbd class="item-tag">c&#43;&#43;</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/teorifr%c3%a5gor">
+        <kbd class="item-tag">teorifrågor</kbd>
+    </a>
+    
+    <a href="https://lunk-liu.github.io/tentaplugg/tags/160817">
+        <kbd class="item-tag">160817</kbd>
     </a>
     
 
 </div>
  
 
-</main>
-
-
+    
 
 <div class="pages">
 
     
     <a class="icon pages-icon" href="/tentaplugg/tags/teorifr%C3%A5gor/" rel="prev">
-        <i class="fa fa-arrow-left"></i>
+        <i class="fa fa-arrow-left"></i> Previous
     </a>
      
     <a class="icon pages-icon" href="/tentaplugg/tags/teorifr%C3%A5gor/page/3/" rel="next">
-        <i class="fa fa-arrow-right"></i>
+        Next <i class="fa fa-arrow-right"></i>
     </a>
     
 
 </div>
 
 
+</main>
+
+
 
         <footer>
 
-            <p class="copyright text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a></p>
+            <p class="copyright text-muted"> :)</p>
 
         </footer>
        
